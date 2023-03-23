@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="title text--gray"> SPLI<br>TTER</h1>
+    </header>
+
+
+    <aside class="tip-calculator-container">
+        <article class="tip-calculator">
+
+            <div class="desktop__container">
+                <section class="bill-input text--gray">
+                    <form action="" class="bill-input__input">
+
+                        <label for=""> Bill 
+                <input  type="number " min="0" name="bill-input" id="bill-input" 
+                class="input--dollar" placeholder="0">
+              </label>
+                    </form>
+                    <h2></h2>
+                </section>
+
+                <section class="tip-selector">
+
+                    <h2 class="tip-selector__title text--gray ">Select Tip % </h2>
+                    <div class="buttons" id="percent-buttons">
+
+                        <button class="button tip-button" id="percent-button">5</button>
+                        <button class="button tip-button" id="percent-button">10</button>
+                        <button class="button tip-button " id="percent-button">15</button>
+                        <button class="button tip-button" id="percent-button">25</button>
+                        <button class="button tip-button " id="percent-button">50</button>
+                        <input class="button--light button text--gray" id="Custom-button"></input>
+
+                    </div>
+
+
+                </section>
+
+                <section class="PeopleQuantity text--gray ">
+
+                    <form action=" "></form>
+                    <label>Number of People
+              <input type="number " placeholder="0" min="1" class="input--people " id="people-input">
+            </label>
+
+                </section>
+            </div>
+            <section class="tip-calc__Results ">
+                <div class="tip-calc__Result-visor ">
+                    <div class="results-title "> <span class="text--white ">Tip Amount
+    </span>
+                        <span class="text--gray results__person ">/person</span> </div>
+                    <div class="result-visor" id="TipAmount"></div>
+                </div>
+
+
+                <div class="tip-calc__Result-visor ">
+                    <div class="results-title "> <span class="text--white ">Total
+            </span>
+                        <span class="text--gray results__person ">/ person</span> </div>
+                    <div class=" result-visor " id="TotalAmount"></div>
+                </div>
+
+
+
+                <button class="button button--reset text--white " id="reset-button"> Reset</button>
+            </section>
+
+        </article>
+    </aside>
+
+    <article>
+
+        <select name="" id="">
+            <option value="">1</option>
+            <option value="">1</option>
+            <option value="">1</option>
+            <option value="">1</option>
+        </select>
+    </article>
+
+    <img src="assets/script/script.js" alt="">
+
+    <!-- <div class="attribution "> -->
+    <!-- Challenge by <a href="https://www.frontendmentor.io?ref=challenge " target="_blank ">Frontend Mentor</a>. Coded by <a href="# ">Your Name Here</a>.
+    </div> -->
+    <script src="/assets/script/script.js "></script>
+</body>
+
+</html>

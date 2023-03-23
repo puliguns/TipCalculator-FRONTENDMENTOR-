@@ -1,0 +1,242 @@
+            /* El objetivo es rehacer la calculadora pero usando Grid y Flexbox  */
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+             :root {
+                --VeryDarkCyan: hsl(183, 100%, 15%);
+                --DarkGrayishCyan: hsl(186, 14%, 43%);
+                --GrayishCyan: hsl(184, 14%, 56%);
+                --LightGrayishCyan: hsl(185, 41%, 84%);
+                --VeryLightGrayishCyan: hsl(180, 37%, 97%);
+                --VeryBrightCyan: hsla(179, 75%, 45%, 0.735);
+                --White: hsl(0, 0%, 100%);
+            }
+            
+            html,
+            body {
+                /* overflow: hidden; */
+                background-color: var(--LightGrayishCyan);
+                border-radius: 25px;
+                min-height: 100vh;
+                /* max-width: 200px */
+                margin: 0 auto;
+                padding: 0px;
+                /* width: 375px; */
+                font-family: 'Space Mono', monospace;
+                /* display: flex; */
+                /* flex-direction: column; */
+            }
+            
+            input {
+                position: relative;
+                display: block;
+                width: 80%;
+                margin: 10px;
+                background-color: var(--VeryLightGrayishCyan);
+                border: var(--VeryLightGrayishCyan) 1px solid;
+                outline: transparent;
+                font-size: 1.5rem;
+                font-family: 'Space Mono', monospace;
+                color: var(--VeryDarkCyan);
+            }
+            
+            label {
+                display: inline;
+                width: 80%;
+            }
+            
+            .title {
+                position: relative;
+                margin: 30px;
+                font-weight: 200;
+                font-size: 1.5rem;
+                letter-spacing: 10px;
+            }
+            
+            .tip-calculator-container {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .tip-calculator {
+                position: relative;
+                display: flex;
+                flex-flow: column nowrap;
+                /* grid-template-columns: 100%; */
+                /* grid-template-rows: repeat(6, 1fr); */
+                /* grid-gap: 2fr; */
+                /* grid-template-areas: " first" "second" "third""fourth"; */
+                /* padding: 1.2rem; */
+                justify-content: center;
+                align-items: center;
+                border-radius: 30px;
+                width: 100%;
+                margin: 0;
+                background-color: #fff;
+            }
+            
+            .PeopleQuantity {
+                margin: 30px 0px;
+            }
+            
+            .bill-input {
+                position: relative;
+                margin-top: 20px;
+            }
+            
+            .tip-selector {
+                grid-row: span 2;
+                width: 80%;
+                /* padding: 1.5em; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tip-selector__title {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                left: 0px;
+            }
+            
+            .buttons {
+                display: grid;
+                width: 100%;
+                padding: 1.5rem;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 10px;
+                justify-items: center;
+                padding: 1em;
+            }
+            
+            .button {
+                width: 100%;
+                background-color: var(--VeryDarkCyan);
+                padding: 0.5rem 1rem;
+                color: white;
+                border: transparent;
+                border-radius: 5px;
+                font-size: 1.2rem;
+                font-family: 'Space Mono', monospace;
+            }
+            
+            .button--reset {
+                background-color: var(--VeryBrightCyan);
+                margin: 1.5rem 1rem;
+                width: 80%;
+                padding: 10px;
+            }
+            
+            .button--light {
+                background-color: var(--VeryLightGrayishCyan);
+                font-size: 1rem;
+            }
+            
+            .tip-calculator__text--gray {
+                background-color: var(--VeryLightGrayishCyan);
+            }
+            
+            .tip-calc__Results {
+                position: relative;
+                bottom: 25px;
+                width: 80%;
+                grid-row: span 2;
+                /* padding: 1rem; */
+                border-radius: 20px;
+                background-color: var(--VeryDarkCyan);
+                text-align: center;
+            }
+            
+            .results__person {
+                background-color: inherit;
+                display: block;
+            }
+            
+            .text--gray {
+                color: var(--DarkGrayishCyan);
+            }
+            
+            .text--white {
+                color: #f5deb3;
+            }
+            
+            .title {
+                text-align: center;
+            }
+            
+            .tip-calc__Result-visor {
+                position: relative;
+                display: flex;
+                flex-basis: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+            }
+            
+            .results-title {
+                position: relative;
+                margin: 0px;
+                width: 50%;
+            }
+            
+            .result-visor {
+                color: var(--VeryBrightCyan);
+                width: 50%;
+                font-size: 1.5rem;
+            }
+            
+            .result-visor::before {
+                content: "$";
+            }
+            
+            .tip-button::after {
+                content: "%";
+            }
+            
+            .tip-button:active,
+            .button--selected {
+                background-color: var(--VeryBrightCyan);
+                color: var(--VeryDarkCyan);
+            }
+            
+            .input--dollar::before {
+                content: url(/images/icon-dollar.svg);
+            }
+            
+            @media screen and (min-width:375px) {
+                .tip-calculator {
+                    display: flex;
+                    height: 60%;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                    flex-grow: 1;
+                }
+                .tip-calc__Results {
+                    position: relative;
+                    ;
+                    border-radius: 10px;
+                    width: 50%;
+                    height: 100%;
+                }
+                .desktop__container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                    margin: 0px;
+                    height: auto;
+                }
+            }
